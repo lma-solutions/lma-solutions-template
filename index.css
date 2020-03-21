@@ -4,20 +4,21 @@ body, html {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
   line-height: 1.5;
+  align-items: center;
 }
 
 main {
-  max-width: 45em;
-  padding: 1em;
+  margin: 1em;
   margin: 0 auto;
 }
 
 .header {
   padding-bottom: 1em;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #707070;
   height: 3.75em;
+  font-size: 1em;
 }
 
 .header .navigation {
@@ -25,7 +26,7 @@ main {
   flex-wrap: wrap;
   display: flex;
 
-  max-width: 45em;
+  max-width: 63em;
   padding: 1em 1em 0 1em;
   margin: 0 auto;
 }
@@ -39,25 +40,49 @@ main {
   flex: 100%;
 }
 
-.content {
-  flex-wrap: wrap;
-  display: flex;
+.header .navigation nav a {
+  padding: 0.5em;
+  font-size: 1.125em;
+  color: #707070;
 }
 
-.content > .entry {
+.content  {
+  flex-wrap: wrap;
+  display: flex;
+  flex: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .entry {
   border-bottom: 1px solid gray;
   flex-wrap: wrap;
+  flex: 100%;
+  max-width: 63em;
+}
+
+.home {
+  flex: 100%;
+  background-image: url(assets/home-bg.jpg);
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+.home .entry {
   flex: 100%;
 }
 
 .entry {
-  display: flex;
+  flex: 100%;
 }
 
-.content > .entry > .entry-header,
-.content > .entry > .entry-footer {
-  flex: 100%;
-  text-align: center;
+/* Home */
+
+.home h1 {
+  font-size: 2.25em;
+  font-weight: 400;
+  color: #58595B;
 }
 
 @media only screen and (min-width: 480px) {
