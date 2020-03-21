@@ -1,0 +1,80 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 45em;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.header {
+  padding-bottom: 1em;
+  border-bottom: 1px solid gray;
+  height: 3.75em;
+}
+
+.header .navigation {
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+
+  max-width: 45em;
+  padding: 1em 1em 0 1em;
+  margin: 0 auto;
+}
+
+.header .navigation h1 {
+  margin: 0;
+  flex: 100%;
+}
+
+.header .navigation nav {
+  flex: 100%;
+}
+
+.content {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.content > .entry {
+  border-bottom: 1px solid gray;
+  flex-wrap: wrap;
+  flex: 100%;
+}
+
+.entry {
+  display: flex;
+}
+
+.content > .entry > .entry-header,
+.content > .entry > .entry-footer {
+  flex: 100%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 480px) {
+  .header .navigation h1 {
+    flex: 50%;
+  }
+
+  .header .navigation nav {
+    text-align: end;
+    flex: 50%;
+  }
+
+  .span-half {
+    flex: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+}
