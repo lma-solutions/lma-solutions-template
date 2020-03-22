@@ -114,10 +114,21 @@ img.image {
   width: 75%;
 }
 
+.button {
+  background: #77CC53;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 0.4em 2em;
+  font-size: 1.5em;
+  border-radius: 1em;
+}
+
 /* Home */
 
 .home .entry {
   flex: 100%;
+  text-align: center;
 }
 
 .home {
@@ -125,6 +136,12 @@ img.image {
   position: relative;
   z-index: 1;
   color: #707070;
+}
+
+.home h1 {
+  font-size: 2.25em;
+  font-weight: 400;
+  color: #58595B;
 }
 
 .home img.image {
@@ -159,10 +176,9 @@ img.image {
   height: 100%;
 }
 
-.home h1 {
-  font-size: 2.25em;
-  font-weight: 400;
-  color: #58595B;
+.home .button {
+  position: relative;
+  bottom: -0.7em;
 }
 
 @media only screen and (min-width: 480px) {
