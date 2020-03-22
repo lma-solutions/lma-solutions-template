@@ -115,13 +115,36 @@ img.image {
 }
 
 .button {
-  background: #77CC53;
-  border: none;
-  color: white;
-  text-align: center;
-  padding: 0.4em 2em;
+	border: none;
   font-size: 1.5em;
+  background: #77CC53;
+	color: #ffffff;
+	cursor: pointer;
+	padding: 0.4em 2em;
   border-radius: 1em;
+	outline: none;
+	position: relative;
+	-webkit-transition: background-color 0.3s;
+	-moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.button:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: background-color 0.3s;
+	-moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+	background: #ffffff;
+  color: #58595B;
+  border: 0.1em solid #77CC53;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /* Home */
@@ -129,6 +152,7 @@ img.image {
 .home .entry {
   flex: 100%;
   text-align: center;
+  bottom: 15em;
 }
 
 .home {
