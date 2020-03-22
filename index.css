@@ -55,11 +55,36 @@ main {
   padding: 0.5em;
   font-size: 1.125em;
   color: #707070;
+  text-decoration: none;
+  position: relative;
 }
 
-.header .navigation nav a:hover {
-  text-decoration: underline;
-  text-decoration-color: #239BCF;
+.header .navigation nav a:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+}
+
+.header .navigation nav a:hover:after {
+  /* text-decoration: underline;
+  text-decoration-color: #239BCF; */
+  width: 75%;
+  background: #239BCF;
+
+  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+  bottom: 0.25em;
+
+  /* center - (optional) use with adjusting width   */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  /* optional animation */
+  -o-transition:0.5s;
+  -ms-transition:0.5s;
+  -moz-transition:0.5s;
+  -webkit-transition:0.5s;
+  transition:0.5s;
 }
 
 /* TODO: fix .header .navigation additional space. */
@@ -100,6 +125,21 @@ img.image {
   position: relative;
   z-index: 1;
   color: #707070;
+}
+
+.home img.image {
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.home img.image:hover {
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .home::before {
