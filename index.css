@@ -18,19 +18,20 @@ a:hover {
 }
 
 main {
-  margin: 1em;
-  margin: 0 auto;
+  margin-top: 3.75em;
 }
 
 .header {
-  /* padding-bottom: 1em; */
+  top: 0;
   border-bottom: 1px solid #707070;
+  padding: 0em 1em 0em 1em;
   height: 3.75em;
   font-size: 1em;
   position: fixed;
   background: #ffffff;
   width: 100%;
   justify-content: center;
+  z-index: 10;
 }
 
 .header .navigation {
@@ -39,7 +40,6 @@ main {
   display: flex;
 
   max-width: 63em;
-  /* padding: 1em 1em 0 1em; */
   margin: 0 auto;
 }
 
@@ -73,21 +73,11 @@ main {
 
 .content .entry {
   border-bottom: 1px solid gray;
+  padding: 0em 1em 0em 1em;
   flex-wrap: wrap;
   flex: 100%;
   max-width: 63em;
-}
-
-.home {
-  flex: 100%;
-  background-image: url(assets/home-bg.jpg);
-  background-attachment: fixed;
-  background-repeat:no-repeat;
-  background-size: cover;
-}
-
-.home .entry {
-  flex: 100%;
+  margin: 0 auto;
 }
 
 .entry {
@@ -95,6 +85,34 @@ main {
 }
 
 /* Home */
+
+.home .entry {
+  flex: 100%;
+}
+
+.home {
+  flex: 100%;
+  position: relative;
+  z-index: 1;
+  color: #707070;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(assets/home-bg.jpg) center center;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+}
 
 .home h1 {
   font-size: 2.25em;
