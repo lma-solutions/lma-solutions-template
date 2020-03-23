@@ -94,8 +94,10 @@ img.image {
 
 /* TODO: fix .header .navigation additional space. */
 /* TODO: replace width:100% with flex:100%. */
+/* TODO: not equal spaces between columns. */
 
 .footer {
+  margin-top: 1em;
   border-top: 0.1em solid #707070;
   min-height: 3.75em;
   font-size: 1em;
@@ -374,8 +376,14 @@ img.image {
 }
 
 .about .temp {
-  width: 100%;
+  flex: 100%;
+  min-width: 25em;
+  background-color: #E5E5E5;
   height: 15em;
+}
+
+.about p.text {
+  padding-right: 1em;
 }
 
 /* Responsive Part */
@@ -411,13 +419,15 @@ img.image {
     flex-direction: column;
   }
 
-  .column:first-child {
-    padding: 0 0.5em 0 0;
-  }
+  /* TODO: Fix this. */
+  /* .content first-child {
+    padding: 0 1em 0 0;
+  } */
 
-  .column:last-child {
+  /* TODO: Fix this. */
+  /* .column:last-child {
     padding: 0 0 0 0.5em;
-  }
+  } */
 
   .left{
     text-align: left;
