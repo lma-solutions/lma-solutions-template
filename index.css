@@ -102,7 +102,7 @@ img.image {
 }
 
 .content .entry {
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
   padding: 0em 1em 0em 1em;
   flex-wrap: wrap;
   flex: 100%;
@@ -178,6 +178,23 @@ img.image {
   text-align: center;
 }
 
+.home::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(assets/home-bg.jpg) center center;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+}
+
 .home h1 {
   font-size: 2.25em;
   font-weight: 400;
@@ -200,23 +217,6 @@ img.image {
     transform: scale(1.1);
 }
 
-.home::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url(assets/home-bg.jpg) center center;
-  background-attachment: fixed;
-  background-repeat:no-repeat;
-  background-size: cover;
-  opacity: 0.4;
-  width: 100%;
-  height: 100%;
-}
-
 .home .button {
   position: relative;
   bottom: -0.7em;
@@ -226,13 +226,17 @@ img.image {
 
 .functions {
   flex: 100%;
-  padding-top: 1em; /* TODO: This may go to Home */
+  padding-top: 2em; /* TODO: This may go to Home */
   color: #000000;
 }
 
 .functions .entry {
   flex: 100%;
   text-align: center;
+}
+
+.functions .row:last-child {
+  padding-bottom: 2em;
 }
 
 .functions h1 {
@@ -253,17 +257,12 @@ img.image {
   display: flex;
   align-items: center;
 }
-/*
-.functions .row:hover, .functions .row:hover ~ .functions img.image:hover {
-  color: red;
-} */
-
 
 .functions span {
   font-weight: 700;
 }
 
-.functions .row:hover span {
+.functions .row:hover p:hover span {
   color: #C8263D;
   -webkit-transition: all .25s;
   -moz-transition: all .25s;
@@ -272,7 +271,7 @@ img.image {
 }
 
 .functions img.image {
-  border: 0.1em solid #ffffff;
+  border: 0.1em dashed #ffffff;
   -webkit-transition: all .25s;
   -moz-transition: all .25s;
   -o-transition: all .25s;
@@ -281,6 +280,40 @@ img.image {
 
 .functions .row:hover img.image {
   border: 0.1em dashed #C8263D;
+}
+
+/* Comparison */
+
+.comparison {
+  flex: 100%;
+  color: #000000;
+  position: relative;
+  z-index: 1;
+}
+
+.comparison .entry {
+  flex: 100%;
+  text-align: center;
+}
+
+.comparison::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    rgba(112, 112, 112, 0.4),
+    rgba(112, 112, 112, 0.4)
+  ),url(assets/comparison-bg.jpg) center center;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  /* opacity: 0.6; */
+  width: 100%;
+  height: 100%;
 }
 
 /* Responsive Part */
