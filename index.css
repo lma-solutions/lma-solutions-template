@@ -7,6 +7,7 @@ body {
   font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
   line-height: 1.5;
   align-items: center;
+  flex-direction: column;
 }
 
 a {
@@ -28,7 +29,6 @@ img.image {
 .header {
   top: 0;
   border-bottom: 1px solid #707070;
-  padding: 0em 1em 0em 1em;
   /* height: 3.75em; */
   font-size: 1em;
   position: fixed;
@@ -38,10 +38,11 @@ img.image {
 }
 
 .header .navigation {
+  padding: 0.5em 1em 0.5em 1em;
   align-items: center;
   flex-wrap: wrap;
   display: flex;
-  height: 3.75em;
+  /* min-height: 3.75em; */
   max-width: 63em;
   margin: 0 auto;
 }
@@ -92,6 +93,27 @@ img.image {
 }
 
 /* TODO: fix .header .navigation additional space. */
+
+.footer {
+  border-top: 0.1em solid #707070;
+  min-height: 3.75em;
+  font-size: 1em;
+  background: #ffffff;
+  width: 100%;
+  color: #58595B;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .copyright {
+  padding: 0.5em 1em 0.5em 1em;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  max-width: 63em;
+  margin: 0 auto;
+  flex: 100%;
+}
 
 .content  {
   flex-wrap: wrap;
@@ -329,6 +351,10 @@ img.image {
   }
 
   .span-half {
+    flex: 50%;
+  }
+
+  .footer .copyright {
     flex: 50%;
   }
 }
