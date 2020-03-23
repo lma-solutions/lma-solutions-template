@@ -140,18 +140,23 @@ img.image {
   flex: 100%;
   display: flex;
   text-align: left;
+  flex-direction: column;
 }
 
-.row > *{
+.row > * {
+  flex: 50%;
   padding: 0.5em;
+  /* width: 100%; */
 }
 
 .left {
-  text-align: left;
+  text-align: center;
+  flex: 100%;
 }
 
 .right {
-  text-align: right;
+  text-align: center;
+  flex: 100%;
 }
 
 .button {
@@ -249,7 +254,7 @@ img.image {
 .functions {
   flex: 100%;
   padding-top: 2em; /* TODO: This may go to Home */
-  color: #000000;
+  color: #58595B;
 }
 
 .functions .entry {
@@ -267,12 +272,13 @@ img.image {
 }
 
 .functions p {
-  width: 50%;
+  width: 100%;
   font-size: 1.5em;
 }
 
 .functions .row div {
-  width: 50%;
+  width: 100%;
+  align-items: flex-start;
 }
 
 .functions .row {
@@ -338,6 +344,23 @@ img.image {
   height: 100%;
 }
 
+/* About */
+
+.about {
+  flex: 100%;
+  color: #58595B
+}
+
+.about .entry {
+  flex: 100%;
+  text-align: left;
+}
+
+.about h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+}
+
 /* Responsive Part */
 
 @media only screen and (min-width: 480px) {
@@ -356,6 +379,32 @@ img.image {
 
   .footer .copyright {
     flex: 50%;
+  }
+
+  .row {
+    flex: 100%;
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+  }
+
+  .left{
+    text-align: left;
+    flex: 50%;
+  }
+
+  .right {
+    text-align: right;
+    flex: 50%;
+  }
+
+  .functions p {
+    width: 50%;
+    font-size: 1.5em;
+  }
+
+  .functions .row div {
+    width: 50%;
   }
 }
 
