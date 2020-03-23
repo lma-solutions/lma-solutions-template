@@ -21,6 +21,10 @@ main {
   margin-top: 3.75em;
 }
 
+img.image {
+  width: 100%;
+}
+
 .header {
   top: 0;
   border-bottom: 1px solid #707070;
@@ -110,8 +114,22 @@ main {
   flex: 100%;
 }
 
-img.image {
-  width: 75%;
+.row {
+  flex: 100%;
+  display: flex;
+  text-align: left;
+}
+
+.row > *{
+  padding: 0.5em;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
 }
 
 .button {
@@ -149,17 +167,15 @@ img.image {
 
 /* Home */
 
-.home .entry {
-  flex: 100%;
-  text-align: center;
-  bottom: 15em;
-}
-
 .home {
   flex: 100%;
   position: relative;
   z-index: 1;
   color: #707070;
+}
+
+.home .entry {
+  text-align: center;
 }
 
 .home h1 {
@@ -169,6 +185,7 @@ img.image {
 }
 
 .home img.image {
+  width: 75%;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -o-transition: all .5s;
@@ -204,6 +221,69 @@ img.image {
   position: relative;
   bottom: -0.7em;
 }
+
+/* Functions */
+
+.functions {
+  flex: 100%;
+  padding-top: 1em; /* TODO: This may go to Home */
+  color: #000000;
+}
+
+.functions .entry {
+  flex: 100%;
+  text-align: center;
+}
+
+.functions h1 {
+  font-size: 2.25em;
+  font-weight: 400;
+}
+
+.functions p {
+  width: 50%;
+  font-size: 1.5em;
+}
+
+.functions .row div {
+  width: 50%;
+}
+
+.functions .row {
+  display: flex;
+  align-items: center;
+}
+/*
+.functions .row:hover, .functions .row:hover ~ .functions img.image:hover {
+  color: red;
+} */
+
+
+.functions span {
+  font-weight: 700;
+}
+
+.functions .row:hover span {
+  color: #C8263D;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s;
+}
+
+.functions img.image {
+  border: 0.1em solid #ffffff;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s;
+}
+
+.functions .row:hover img.image {
+  border: 0.1em dashed #C8263D;
+}
+
+/* Responsive Part */
 
 @media only screen and (min-width: 480px) {
   .header .navigation h1 {
