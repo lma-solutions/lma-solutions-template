@@ -207,16 +207,23 @@ img.image {
   display: flex;
 }
 
-.form > input {
+.form > input, .form > textarea {
   flex: 100%;
-}
-
-.form > textarea {
-  flex: 100%;
+  border-radius: 0.5em;
+  border: none;
+  font-size: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0.7em;
+  color: #58595B;
 }
 
 .form > * {
   margin: 0.25em 0;
+}
+
+.form > input[type=text]:focus, .form > input[type=email]:focus {
+  background-color: #ffffff;
+  outline: none;
 }
 
 /* Home */
@@ -424,6 +431,7 @@ img.image {
   flex: 100%;
   text-align: left;
   display: flex;
+  padding-bottom: 1em;
 }
 
 .contacts::before {
