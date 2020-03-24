@@ -389,12 +389,9 @@ img.image {
 .about .entry {
   display: flex;
   align-items: center;
-  padding: 1em 0;
-}
-
-.about .entry {
+  margin-top: 1em;
+  margin-bottom: 1em;
   flex: 100%;
-  text-align: left;
 }
 
 .about h1 {
@@ -432,7 +429,8 @@ img.image {
   flex: 100%;
   text-align: left;
   display: flex;
-  padding: 1em 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .contacts::before {
