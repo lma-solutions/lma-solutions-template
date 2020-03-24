@@ -176,6 +176,9 @@ img.image {
 	-moz-transition: background-color 0.3s;
   transition: background-color 0.3s;
   text-decoration: none;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
 }
 
 .button:after {
@@ -193,13 +196,27 @@ img.image {
   /* border: 0.1em solid #77CC53; */
   text-decoration: none;
   /* font-weight: 600; */
-  box-shadow:inset 0px 0px 0px 0.1em #77CC53;;
-  -webkit-box-shadow:inset 0px 0px 0px 0.1em #77CC53;;
-  -moz-box-shadow:inset 0px 0px 0px 0.1em #77CC53;;
+  box-shadow: inset 0 0 0 0.1em #77CC53, 0 0 1em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 0 0.1em #77CC53, 0 0 1em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 0 0.1em #77CC53, 0 0 1em rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .form > input {
   flex: 100%;
+}
+
+.form > textarea {
+  flex: 100%;
+}
+
+.form > * {
+  margin: 0.25em 0;
 }
 
 /* Home */
@@ -397,6 +414,7 @@ img.image {
 
 .contacts {
   flex: 100%;
+  flex-direction: row;
   color: #58595B;
   position: relative;
   z-index: 1;
@@ -405,6 +423,7 @@ img.image {
 .contacts .entry {
   flex: 100%;
   text-align: left;
+  display: flex;
 }
 
 .contacts::before {
@@ -456,7 +475,7 @@ img.image {
   }
 
   .column {
-    flex: 50%;
+    width: 50%; /* TODO: fix this (flex should be) */
     display: flex;
     flex-direction: column;
   }
