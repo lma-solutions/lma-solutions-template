@@ -389,6 +389,7 @@ img.image {
 .about .entry {
   display: flex;
   align-items: center;
+  padding: 1em 0;
 }
 
 .about .entry {
@@ -431,7 +432,7 @@ img.image {
   flex: 100%;
   text-align: left;
   display: flex;
-  padding-bottom: 1em;
+  padding: 1em 0;
 }
 
 .contacts::before {
