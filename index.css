@@ -152,6 +152,10 @@ img.image {
   /* width: 100%; */
 }
 
+.column {
+  width: 100%;
+}
+
 .left {
   text-align: center;
   flex: 100%;
