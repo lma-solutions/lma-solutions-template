@@ -376,7 +376,7 @@ img.image {
   background: linear-gradient(
     rgba(112, 112, 112, 0.4),
     rgba(112, 112, 112, 0.4)
-  ),url(assets/comparison-bg.jpg) center center;
+  ), url(assets/comparison-bg.jpg) center center;
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
