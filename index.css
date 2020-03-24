@@ -190,9 +190,12 @@ img.image {
 .button:hover {
 	background: #ffffff;
   color: #58595B;
-  border: 0.1em solid #77CC53;
+  /* border: 0.1em solid #77CC53; */
   text-decoration: none;
-  font-weight: 600;
+  /* font-weight: 600; */
+  box-shadow:inset 0px 0px 0px 0.1em #77CC53;;
+  -webkit-box-shadow:inset 0px 0px 0px 0.1em #77CC53;;
+  -moz-box-shadow:inset 0px 0px 0px 0.1em #77CC53;;
 }
 
 .form > input {
