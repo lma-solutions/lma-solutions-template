@@ -1,5 +1,3 @@
-// import './main.scss';
-
-function main() {
-
+function sendMail(mail) {
+  console.log("Test");
 }
