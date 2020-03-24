@@ -10,6 +10,10 @@
   <title>
     Home | LMA solutions
   </title>
+
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <script src="index.js"></script>
 </head>
 
 <body>
@@ -108,7 +112,7 @@
               Contact Us!
             </h1>
             <div>
-              <form class="form" action="/">
+              <form class="form" name="mailForm" action="javascript:sendMail(mailForm)">
                 <input type="text" placeholder="Enter Name" name="name" required>
                 <input type="email" placeholder="Enter Email" name="email" required>
                 <input type="text" placeholder="Enter Subject" name="Subject" required>
