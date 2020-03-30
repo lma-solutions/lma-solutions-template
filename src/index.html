@@ -8,12 +8,8 @@
   <link rel="stylesheet" type="text/css" href="index.css" />
 
   <title>
-    Home | LMA solutions
+    LMA solutions
   </title>
-
-  <script src="https://smtpjs.com/v3/smtp.js">
-  </script>
-  <script src="index.js"></script>
 </head>
 
 <body>
@@ -44,7 +40,7 @@
           <h1>
             Improve your Business!
           </h1>
-          <a href='/' class="button">Contact US!</a>
+          <a href='#contacts' class="button">Contact US!</a>
         </div>
       </div>
       <!-- FUNCTIONS -->
@@ -78,6 +74,16 @@
           <h1>
             Comparison of Linear Actuators
           </h1>
+          <div class="row">
+            <figure class="highcharts-figure">
+              <div id="container"></div>
+              <p class="highcharts-description">
+                  Basic line chart showing trends in a dataset. This chart includes the
+                  <code>series-label</code> module, which adds a label to each line for
+                  enhanced readability.
+              </p>
+            </figure>
+          </div>
         </div>
       </div>
       <!-- ABOUT -->
@@ -130,6 +136,11 @@
   <footer class="footer">
     <div class="copyright">© 2020 LMS.solutions</div>
   </footer>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="index.js"></script>
 </body>
-
 </html>
