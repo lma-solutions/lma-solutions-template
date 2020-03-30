@@ -28,10 +28,6 @@ main {
   margin-top: 3.75em;
 }
 
-img.image {
-  width: 100%;
-}
-
 .header {
   top: 0;
   border-bottom: 1px solid #707070;
@@ -144,13 +140,12 @@ img.image {
   flex-direction: column;
 }
 
-.row > * {
-  flex: calc(50% - 0.5em);
-  padding: 0.5em;
+.column {
+  flex: 100%;
 }
 
-.column {
-  width: 100%;
+.column > img.image, .row > img.image {
+  width: calc(100% - 0.5em);
 }
 
 .left {
@@ -298,10 +293,11 @@ img.image {
 .functions .entry {
   flex: 100%;
   text-align: center;
+  padding-bottom: 2em;
 }
 
-.functions .row:last-child {
-  padding-bottom: 2em;
+.functions .entry .row {
+  align-items: center;
 }
 
 .functions h1 {
@@ -310,18 +306,7 @@ img.image {
 }
 
 .functions p {
-  flex: 100%;
   font-size: 1.5em;
-}
-
-.functions .row div {
-  flex: 100%;
-  align-items: flex-start;
-}
-
-.functions .row {
-  display: flex;
-  align-items: center;
 }
 
 .functions span {
@@ -337,6 +322,7 @@ img.image {
 }
 
 .functions img.image {
+  padding: 0.5em;
   border: 0.1em dashed #ffffff;
   -webkit-transition: all .25s;
   -moz-transition: all .25s;
@@ -344,6 +330,7 @@ img.image {
   transition: all .25s;
 }
 
+/* https://stackoverflow.com/questions/6910049/on-a-css-hover-event-can-i-change-another-divs-styling */
 .functions .row:hover img.image {
   border: 0.1em dashed #C8263D;
 }
@@ -491,26 +478,15 @@ img.image {
   }
 
   .column:nth-child(2) {
-    padding-left: 0 0 0 0.5em;
+    padding: 0 0 0 0.5em;
   }
 
-  .left{
+  .left {
     text-align: left;
-    flex: 50%;
   }
 
   .right {
     text-align: right;
-    flex: 50%;
-  }
-
-  .functions p {
-    flex: 50%;
-    font-size: 1.5em;
-  }
-
-  .functions .row div {
-    flex: 50%;
   }
 }
 
