@@ -133,7 +133,7 @@ main {
   flex: 100%;
 }
 
-.row {
+.row, .row-reverse {
   flex: 100%;
   display: flex;
   text-align: left;
@@ -144,7 +144,9 @@ main {
   flex: 100%;
 }
 
-.column > img.image, .row > img.image {
+.column > img.image,
+.row > img.image,
+.row-reverse > img.image {
   width: calc(100% - 0.5em);
 }
 
@@ -296,7 +298,8 @@ main {
   padding-bottom: 2em;
 }
 
-.functions .entry .row {
+.functions .entry .row,
+.functions .entry .row-reverse {
   align-items: center;
 }
 
@@ -331,7 +334,8 @@ main {
 }
 
 /* https://stackoverflow.com/questions/6910049/on-a-css-hover-event-can-i-change-another-divs-styling */
-.functions .row:hover img.image {
+.functions .row:hover img.image,
+.functions .row-reverse:hover img.image {
   border: 0.1em dashed #C8263D;
 }
 
@@ -463,21 +467,30 @@ main {
     flex: 50%;
   }
 
-  .row {
+  .row, .row-reverse {
     flex: 100%;
     display: flex;
     text-align: left;
     flex-direction: row;
   }
 
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
+
   .column {
     flex: calc(50% - 0.5em);
     display: flex;
     flex-direction: column;
+  }
+
+  .row > .column,
+  .row-reverse > .column:nth-child(2) {
     padding: 0 0.5em 0 0;
   }
 
-  .column:nth-child(2) {
+  .row > .column:nth-child(2),
+  .row-reverse > .column {
     padding: 0 0 0 0.5em;
   }
 
