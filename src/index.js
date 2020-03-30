@@ -2,6 +2,8 @@ function sendMail(mail) {
   console.log("Test");
 }
 
+
+
 Highcharts.chart('container', {
 
   title: {

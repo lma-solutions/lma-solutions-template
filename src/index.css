@@ -88,7 +88,6 @@ main {
 }
 
 /* TODO: fix .header .navigation additional space. */
-/* TODO: not equal spaces between columns. */
 
 .footer {
   /* margin-top: 1em; */
@@ -191,9 +190,7 @@ main {
 .button:hover {
 	background: #ffffff;
   color: #58595B;
-  /* border: 0.1em solid #77CC53; */
   text-decoration: none;
-  /* font-weight: 600; */
   box-shadow: inset 0 0 0 0.1em #77CC53, 0 0 1em rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 0 0 0.1em #77CC53, 0 0 1em rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 0 0 0.1em #77CC53, 0 0 1em rgba(0, 0, 0, 0.2);
@@ -310,18 +307,14 @@ main {
 
 .functions p {
   font-size: 1.5em;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s
 }
 
 .functions span {
   font-weight: 700;
-}
-
-.functions .row:hover p:hover span {
-  color: #C8263D;
-  -webkit-transition: all .25s;
-  -moz-transition: all .25s;
-  -o-transition: all .25s;
-  transition: all .25s;
 }
 
 .functions img.image {
@@ -333,10 +326,14 @@ main {
   transition: all .25s;
 }
 
-/* https://stackoverflow.com/questions/6910049/on-a-css-hover-event-can-i-change-another-divs-styling */
-.functions .row:hover img.image,
-.functions .row-reverse:hover img.image {
+.functions .row div:hover ~ .column img.image,
+.functions .row-reverse div:hover ~ .column img.image {
   border: 0.1em dashed #C8263D;
+}
+
+.functions .row div:hover,
+.functions .row-reverse div:hover {
+  color: #C8263D;
 }
 
 /* Comparison */
