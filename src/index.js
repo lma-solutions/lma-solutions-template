@@ -2,24 +2,26 @@ function sendMail(mail) {
   console.log("Test");
 }
 
-
-
 Highcharts.chart('container', {
 
   title: {
-      text: 'Solar Employment Growth by Sector, 2010-2016'
+      text: undefined
+  },
+
+  chart: {
+    backgroundColor: 'transparent'
   },
 
   yAxis: {
       title: {
-          text: 'Number of Employees'
-      }
+          text: 'High',
+          align: 'high'
+      },
+      ceiling: 5
   },
 
   xAxis: {
-      accessibility: {
-          rangeDescription: 'Range: 2010 to 2017'
-      }
+      categories: ['Forces', 'Speed', 'Reliability', 'Accuracy', 'Efficiency', 'Simplicity']
   },
 
   legend: {
@@ -32,26 +34,25 @@ Highcharts.chart('container', {
       series: {
           label: {
               connectorAllowed: false
-          },
-          pointStart: 2010
+          }
       }
   },
 
   series: [{
-      name: 'Installation',
-      data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+      name: 'Linear Magnetic Actuator',
+      data: [4, 4, 5, 5, 5, 5]
   }, {
-      name: 'Manufacturing',
-      data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+      name: 'Pneumatic',
+      data: [3, 4, 4, 3, 1, 2]
   }, {
-      name: 'Sales & Distribution',
-      data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+      name: 'Hydraulic',
+      data: [5, 5, 4, 3, 2, 2]
   }, {
-      name: 'Project Development',
-      data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+      name: 'Electro Mechanical',
+      data: [4, 4, 1, 5, 5, 5]
   }, {
-      name: 'Other',
-      data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+      name: 'Tubular',
+      data: [2, 3, 5, 5, 4, 5]
   }],
 
   responsive: {
