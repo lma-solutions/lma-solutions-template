@@ -5,3 +5,7 @@
 .highcharts-background {
   fill: transparent;
 }
+
+.highcharts-legend-title {
+  font-weight: 400;
+}
