@@ -9,7 +9,7 @@ Highcharts.chart('container', {
   },
 
   chart: {
-    backgroundColor: 'transparent'
+    // backgroundColor: 'transparent'
   },
 
   yAxis: {
@@ -76,6 +76,10 @@ Highcharts.chart('container', {
 
   exporting: {
     enabled: false
+  },
+
+  chart: {
+    styleMode: true
   }
 
 });
