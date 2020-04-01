@@ -11,7 +11,7 @@ Highcharts.chart('container', {
   chart: {
     styleMode: true,
     spacingTop: 15,
-    spacingBottom: 0,
+    spacingBottom: 15,
     spacingLeft: 0,
     spacingRight: 0
   },
@@ -29,9 +29,12 @@ Highcharts.chart('container', {
         style: {
           color: '#ffffff',
           fontSize: '1.5em'
-        }
+        },
+        overflow: 'none'
       },
-      gridLineDashStyle: 'longdash'
+      gridLineDashStyle: 'longdash',
+      min: 0,
+      max: 5
   },
 
   xAxis: {
