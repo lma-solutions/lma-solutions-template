@@ -1,5 +1,7 @@
-function sendMail(mail) {
-  console.log("Test");
+import Highcharts from 'highcharts';
+
+window.sendMail = function sendMail(mail) {
+  alert("Test");
 }
 
 Highcharts.chart('container', {
