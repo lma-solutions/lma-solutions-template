@@ -2,10 +2,13 @@
   "name": "lma-solutions-template",
   "version": "1.0.0",
   "scripts": {
-    "start": "live-server src/"
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
   "dependencies": {
-    "live-server": "^1.2.1"
+    "highcharts": "^8.0.4"
   }
 }

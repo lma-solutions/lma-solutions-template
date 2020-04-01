@@ -6,34 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="chart.css" />
 
   <title>
-    Home | LMA solutions
+    LMA solutions
   </title>
-
-  <script src="https://smtpjs.com/v3/smtp.js">
-  </script>
-  <script src="index.js"></script>
 </head>
 
 <body>
   <header class="header">
     <div class="navigation">
-      <a href="/">
+      <a href="#home">
         <img src="assets/logo.png" />
       </a>
       <nav>
-        <a href="/home">Home</a>
-        <a href="/product">Product</a>
-        <a href="/about">About</a>
-        <a href="/contacts">Contacts</a>
+        <a href="#home">Home</a>
+        <a href="#product">Product</a>
+        <a href="#about">About</a>
+        <a href="#contacts">Contacts</a>
       </nav>
     </div>
   </header>
   <main>
     <div class="content">
       <!-- HOME -->
-      <div class="home">
+      <div class="home" id="home">
         <div class="entry">
           <h1>
             Linear Magnetic Actuator
@@ -44,31 +41,35 @@
           <h1>
             Improve your Business!
           </h1>
-          <a href='/' class="button">Contact US!</a>
+          <a href='#contacts' class="button">Contact US!</a>
         </div>
       </div>
       <!-- FUNCTIONS -->
-      <div class="functions">
+      <div class="functions" id="product">
         <div class="entry">
           <h1>
             Two Functions
           </h1>
           <div class="row">
-            <p class="right">
-              Converts <span>electric energy</span> to a <span>linear reciprocating movement</span>
-            </p>
-            <div>
+            <div class="column">
+              <p class="right text">
+                Converts <span>electric energy</span> to a <span>linear reciprocating movement</span>
+              </p>
+            </div>
+            <div class="column">
               <img src="assets/first-function.png" alt="First Function" class="image" />
             </div>
           </div>
-          <div class="row">
-            <div>
+          <div class="row-reverse">
+            <div class="column">
+              <p class="left text">
+                Converts a <span>linear reciprocating movement</span> to <span>electric energy</span> by using the motor
+                as a generator
+              </p>
+            </div>
+            <div class="column">
               <img src="assets/second-function.png" alt="Second Function" class="image" />
             </div>
-            <p class="left">
-              Converts a <span>linear reciprocating movement</span> to <span>electric energy</span> by using the motor
-              as a generator
-            </p>
           </div>
         </div>
       </div>
@@ -78,10 +79,17 @@
           <h1>
             Comparison of Linear Actuators
           </h1>
+          <div class="row">
+            <div class="column">
+              <figure class="highcharts-figure">
+                <div id="container"></div>
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
       <!-- ABOUT -->
-      <div class="about">
+      <div class="about" id="about">
         <div class="entry">
             <h1>
               About Us
@@ -105,23 +113,24 @@
         </div>
       </div>
       <!-- CONTACTS -->
-      <div class="contacts">
+      <div class="contacts" id="contacts">
         <div class="entry">
           <div class="column">
             <h1>
               Contact Us!
             </h1>
             <div>
-              <form class="form" name="mailForm" action="javascript:sendMail(mailForm)">
+              <form class="form" action="https://formspree.io/xaydwkre" method="POST">
                 <input type="text" placeholder="Enter Name" name="name" required>
-                <input type="email" placeholder="Enter Email" name="email" required>
-                <input type="text" placeholder="Enter Subject" name="Subject" required>
+                <input type="email" placeholder="Enter Email" name="_replyto" required>
+                <input type="text" placeholder="Enter Subject" name="subject" required>
                 <textarea name="message" placeholder="Enter Message" rows="10" cols="30"></textarea>
 
                 <button type="submit" class="button">Register</button>
               </form>
             </div>
           </div>
+          <div class="column"></div>
         </div>
       </div>
     </div>
@@ -129,6 +138,6 @@
   <footer class="footer">
     <div class="copyright">© 2020 LMS.solutions</div>
   </footer>
+  <script src="./index.js"></script>
 </body>
-
 </html>

@@ -1,3 +1,9 @@
+/* @import url("chart.css"); */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
   padding: 0;
   margin: 0;
@@ -22,14 +28,9 @@ main {
   margin-top: 3.75em;
 }
 
-img.image {
-  width: 100%;
-}
-
 .header {
   top: 0;
   border-bottom: 1px solid #707070;
-  /* height: 3.75em; */
   font-size: 1em;
   position: fixed;
   background: #ffffff;
@@ -42,7 +43,6 @@ img.image {
   align-items: center;
   flex-wrap: wrap;
   display: flex;
-  /* min-height: 3.75em; */
   max-width: 63em;
   margin: 0 auto;
 }
@@ -71,20 +71,15 @@ img.image {
 }
 
 .header .navigation nav a:hover:after {
-  /* text-decoration: underline;
-  text-decoration-color: #239BCF; */
   width: 75%;
   background: #239BCF;
 
-  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
   bottom: 0.25em;
 
-  /* center - (optional) use with adjusting width   */
   margin: 0 auto;
   left: 0;
   right: 0;
 
-  /* optional animation */
   -o-transition:0.5s;
   -ms-transition:0.5s;
   -moz-transition:0.5s;
@@ -93,8 +88,6 @@ img.image {
 }
 
 /* TODO: fix .header .navigation additional space. */
-/* TODO: replace width:100% with flex:100%. */
-/* TODO: not equal spaces between columns. */
 
 .footer {
   /* margin-top: 1em; */
@@ -102,7 +95,7 @@ img.image {
   min-height: 3.75em;
   font-size: 1em;
   background: #ffffff;
-  width: 100%;
+  flex: 100%;
   color: #58595B;
   display: flex;
   flex-wrap: wrap;
@@ -127,33 +120,33 @@ img.image {
 }
 
 .content .entry {
-  /* border-bottom: 1px solid gray; */
   padding: 0em 1em 0em 1em;
   flex-wrap: wrap;
   flex: 100%;
   max-width: 63em;
   margin: 0 auto;
+  min-height: 30em;
 }
 
 .entry {
   flex: 100%;
 }
 
-.row {
+.row, .row-reverse {
   flex: 100%;
   display: flex;
   text-align: left;
   flex-direction: column;
 }
 
-.row > * {
-  flex: 50%;
-  padding: 0.5em;
-  /* width: 100%; */
+.column {
+  flex: 100%;
 }
 
-.column {
-  width: 100%;
+.column > img.image,
+.row > img.image,
+.row-reverse > img.image {
+  width: calc(100% - 0.5em);
 }
 
 .left {
@@ -197,9 +190,7 @@ img.image {
 .button:hover {
 	background: #ffffff;
   color: #58595B;
-  /* border: 0.1em solid #77CC53; */
   text-decoration: none;
-  /* font-weight: 600; */
   box-shadow: inset 0 0 0 0.1em #77CC53, 0 0 1em rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 0 0 0.1em #77CC53, 0 0 1em rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 0 0 0.1em #77CC53, 0 0 1em rgba(0, 0, 0, 0.2);
@@ -301,10 +292,12 @@ img.image {
 .functions .entry {
   flex: 100%;
   text-align: center;
+  padding-bottom: 2em;
 }
 
-.functions .row:last-child {
-  padding-bottom: 2em;
+.functions .entry .row,
+.functions .entry .row-reverse {
+  align-items: center;
 }
 
 .functions h1 {
@@ -313,33 +306,19 @@ img.image {
 }
 
 .functions p {
-  flex: 100%;
   font-size: 1.5em;
-}
-
-.functions .row div {
-  flex: 100%;
-  align-items: flex-start;
-}
-
-.functions .row {
-  display: flex;
-  align-items: center;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s
 }
 
 .functions span {
   font-weight: 700;
 }
 
-.functions .row:hover p:hover span {
-  color: #C8263D;
-  -webkit-transition: all .25s;
-  -moz-transition: all .25s;
-  -o-transition: all .25s;
-  transition: all .25s;
-}
-
 .functions img.image {
+  padding: 0.5em;
   border: 0.1em dashed #ffffff;
   -webkit-transition: all .25s;
   -moz-transition: all .25s;
@@ -347,8 +326,14 @@ img.image {
   transition: all .25s;
 }
 
-.functions .row:hover img.image {
+.functions .row div:hover ~ .column img.image,
+.functions .row-reverse div:hover ~ .column img.image {
   border: 0.1em dashed #C8263D;
+}
+
+.functions .row div:hover,
+.functions .row-reverse div:hover {
+  color: #C8263D;
 }
 
 /* Comparison */
@@ -374,13 +359,12 @@ img.image {
   left: 0;
   right: 0;
   background: linear-gradient(
-    rgba(112, 112, 112, 0.4),
-    rgba(112, 112, 112, 0.4)
+    rgba(112, 112, 112, 0.7),
+    rgba(112, 112, 112, 0.7)
   ), url(assets/comparison-bg.jpg) center center;
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
-  /* opacity: 0.6; */
   width: 100%;
   height: 100%;
 }
@@ -449,7 +433,6 @@ img.image {
   left: 0;
   right: 0;
   background: url(assets/contacts-bg.jpg) center center;
-  /* background-attachment: fixed; */
   background-repeat:no-repeat;
   background-size: cover;
   opacity: 0.75;
@@ -463,7 +446,7 @@ img.image {
 
 /* Responsive Part */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 500px) {
   .header .navigation h1 {
     flex: 50%;
   }
@@ -481,46 +464,39 @@ img.image {
     flex: 50%;
   }
 
-  .row {
+  .row, .row-reverse {
     flex: 100%;
     display: flex;
     text-align: left;
     flex-direction: row;
   }
 
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
+
   .column {
-    width: 50%; /* TODO: fix this (flex should be) */
+    flex: calc(50% - 0.5em);
     display: flex;
     flex-direction: column;
   }
 
-  /* TODO: Fix this. */
-  /* .content first-child {
-    padding: 0 1em 0 0;
-  } */
+  .row > .column,
+  .row-reverse > .column:nth-child(2) {
+    padding: 0 0.5em 0 0;
+  }
 
-  /* TODO: Fix this. */
-  /* .column:last-child {
+  .row > .column:nth-child(2),
+  .row-reverse > .column {
     padding: 0 0 0 0.5em;
-  } */
+  }
 
-  .left{
+  .left {
     text-align: left;
-    flex: 50%;
   }
 
   .right {
     text-align: right;
-    flex: 50%;
-  }
-
-  .functions p {
-    flex: 50%;
-    font-size: 1.5em;
-  }
-
-  .functions .row div {
-    flex: 50%;
   }
 }
 
