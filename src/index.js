@@ -36,7 +36,7 @@ Highcharts.chart('container', {
   },
 
   xAxis: {
-      categories: ['Forces', 'Speed', 'Reliability', 'Accuracy', 'Efficiency', 'Simplicity'],
+      categories: ['Forces', 'Speed', 'Reliability', 'Accuracy', 'Efficiency', 'Cost of Ownership'],
       labels: {
         style: {
           color: '#ffffff',
