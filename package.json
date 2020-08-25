@@ -9,6 +9,6 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "highcharts": "^8.0.4"
+    "highcharts": "^8.1.1"
   }
 }
